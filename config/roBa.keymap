@@ -26,19 +26,29 @@
             key-positions = <12 13>;
         };
 
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
+        nobashi {
+            bindings = <&kp MINUS>;
+            key-positions = <1 2>;
         };
 
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
+        TMClogin {
+            bindings = <&login>;
+            key-positions = <16 17 18>;
         };
 
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
+        ANTlogin {
+            bindings = <&ant>;
+            key-positions = <28 29 30>;
+        };
+
+        back {
+            bindings = <&kp LA(LEFT_ARROW)>;
+            key-positions = <18 19 20>;
+        };
+
+        fwd {
+            bindings = <&kp LA(RIGHT_ARROW)>;
+            key-positions = <19 20 21>;
         };
     };
 
@@ -48,6 +58,20 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
+        };
+
+        login: login {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp N1 &kp N7 &kp EXCL &kp LS(Q) &kp LS(A) &kp LS(Z) &kp N2 &kp W &kp S &kp X>;
+            label = "LOGIN";
+        };
+
+        ant: ant {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp N8 &kp U &kp E &kp S &kp MINUS &kp A &kp J &kp AT &kp N0 &kp N9 &kp N0 &kp N9>;
+            label = "ANT";
         };
     };
 
@@ -67,10 +91,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y         &kp U  &lt 5 I                 &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LEFT_SHIFT                     &kp MINUS      &kp H         &kp J  &kp K                   &kp L    &kp ENTER
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N         &kp M  &lt_to_layer_0 5 COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 DELETE                                          &kp RIGHT_CONTROL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -107,10 +131,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                        &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &mkp MB1  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans                                &trans
             >;
         };
 
