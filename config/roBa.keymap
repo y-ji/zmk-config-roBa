@@ -17,12 +17,12 @@
         compatible = "zmk,combos";
 
         tab {
-            bindings = <&kp TAB>;
+            bindings = <&kp LS(TAB)>;
             key-positions = <11 12>;
         };
 
         shift_tab {
-            bindings = <&kp LS(TAB)>;
+            bindings = <&kp TAB>;
             key-positions = <12 13>;
         };
 
@@ -50,6 +50,81 @@
             bindings = <&kp LA(RIGHT_ARROW)>;
             key-positions = <19 20 21>;
         };
+
+        C+A+D {
+            bindings = <&kp LC(LA(DELETE))>;
+            key-positions = <16 17 18 19>;
+        };
+
+        L_par {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <18 19>;
+        };
+
+        R_par {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <19 20>;
+        };
+
+        L_bra {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <30 31>;
+        };
+
+        R_bra {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <31 32>;
+        };
+
+        L_brace {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <6 7>;
+        };
+
+        R_brace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <7 8>;
+        };
+
+        centerA {
+            bindings = <&centerA>;
+            key-positions = <18 19 20>;
+        };
+
+        centerB {
+            bindings = <&centerB>;
+            key-positions = <30 31 32>;
+        };
+
+        centerC {
+            bindings = <&centerC>;
+            key-positions = <6 7 8>;
+        };
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 1 2>;
+        };
+
+        BT0 {
+            bindings = <&bt BT_SEL 0>;
+            key-positions = <9 0>;
+        };
+
+        BT1 {
+            bindings = <&bt BT_SEL 1>;
+            key-positions = <10 21>;
+        };
+
+        BT2 {
+            bindings = <&bt BT_SEL 2>;
+            key-positions = <22 33>;
+        };
+
+        BT3 {
+            bindings = <&bt BT_SEL 3>;
+            key-positions = <34 42>;
+        };
     };
 
     macros {
@@ -73,6 +148,27 @@
             bindings = <&none &kp N8 &kp U &kp E &kp S &kp MINUS &kp A &kp J &kp AT &kp N0 &kp N9 &kp N0 &kp N9>;
             label = "ANT";
         };
+
+        centerA: centerA {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp RPAR &kp LEFT_ARROW>;
+            label = "CENTERA";
+        };
+
+        centerB: centerB {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LBKT &kp RBKT &kp LEFT_ARROW>;
+            label = "CENTERB";
+        };
+
+        centerC: centerC {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_BRACE &kp RBRC &kp LEFT_ARROW>;
+            label = "CENTERC";
+        };
     };
 
     behaviors {
@@ -92,7 +188,7 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y         &kp U  &lt 5 I                 &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LEFT_SHIFT                     &kp MINUS      &kp H         &kp J  &kp K                   &kp L    &kp ENTER
+&kp A             &kp S         &kp D         &lt 5 F                      &kp G        &kp LEFT_SHIFT                     &kp MINUS      &kp H         &kp J  &lt 5 K                 &kp L    &kp ENTER
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N         &kp M  &lt_to_layer_0 5 COMMA  &kp DOT  &kp SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 DELETE                                          &kp RIGHT_CONTROL
             >;
@@ -102,10 +198,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12
+&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                       &trans  &trans          &kp UP_ARROW    &trans           &trans
+&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &trans  &trans  &kp HOME        &trans          &kp END          &trans
+&trans   &trans   &trans   &trans  &trans   &trans      &trans  &trans                                                   &trans
             >;
         };
 
