@@ -43,7 +43,7 @@
 
         back {
             bindings = <&kp LA(LEFT_ARROW)>;
-            key-positions = <18 19 20>;
+            key-positions = <18 17>;
         };
 
         fwd {
@@ -88,7 +88,7 @@
 
         centerA {
             bindings = <&centerA>;
-            key-positions = <18 19 20>;
+            key-positions = <18 20 19>;
         };
 
         centerB {
@@ -125,6 +125,11 @@
             bindings = <&bt BT_SEL 3>;
             key-positions = <34 42>;
         };
+
+        close {
+            bindings = <&close>;
+            key-positions = <13 18>;
+        };
     };
 
     macros {
@@ -149,25 +154,32 @@
             label = "ANT";
         };
 
-        centerA: centerA {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp LPAR &kp RPAR &kp LEFT_ARROW>;
-            label = "CENTERA";
-        };
-
         centerB: centerB {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LBKT &kp RBKT &kp LEFT_ARROW>;
+            bindings = <&kp LBKT &kp RBKT &kp LEFT_ARROW>;
             label = "CENTERB";
         };
 
         centerC: centerC {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_BRACE &kp RBRC &kp LEFT_ARROW>;
+            bindings = <&kp LEFT_BRACE &kp RBRC &kp LEFT_ARROW>;
             label = "CENTERC";
+        };
+
+        centerA: centerA {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT_ARROW>;
+            label = "CENTERA";
+        };
+
+        close: close {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_CONTROL &kp W>;
+            label = "CLOSE";
         };
     };
 
@@ -227,8 +239,8 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                        &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &mkp MB1  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans                        &trans  &trans    &mkp MB3  &trans    &trans
+&trans  &trans  &trans  &trans  &mkp MB1  &trans      &trans  &trans  &mkp MB1  &trans    &mkp MB2  &trans
 &trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans                                &trans
             >;
