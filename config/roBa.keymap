@@ -51,7 +51,7 @@
             key-positions = <19 20 21>;
         };
 
-        C+A+D {
+        CAD {
             bindings = <&kp LC(LA(DELETE))>;
             key-positions = <16 17 18 19>;
         };
