@@ -285,10 +285,10 @@
 
         WindowsShortcut {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans              &sk LG(UP_ARROW)    &trans               &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LG(LEFT_ARROW)  &sk LG(DOWN_ARROW)  &sk LG(RIGHT_ARROW)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans              &trans              &trans               &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                               &trans
             >;
         };
     };
