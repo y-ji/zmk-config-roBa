@@ -132,7 +132,7 @@
         };
 
         toLayerWin {
-            bindings = <&to 7>;
+            bindings = <&mo 7>;
             key-positions = <2 13>;
         };
     };
@@ -218,10 +218,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                        &kp T                                                                     &kp Y                    &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D         &lt_to_layer_0 5 F           &kp G                   &kp LEFT_SHIFT                     &kp MINUS      &kp H                    &kp J  &lt 5 K    &kp L    &kp ENTER
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B                   &kp COLON                          &kp SEMICOLON  &kp N                    &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt_to_layer_0 1 DELETE                             &kp RIGHT_CONTROL
+&kp Q             &kp W         &kp E         &kp R             &kp T                                               &kp Y         &kp U  &kp I      &kp O    &kp P
+&kp A             &kp S         &kp D         &mo 5             &kp G        &kp LEFT_SHIFT          &kp MINUS      &kp H         &kp J  &lt 5 K    &kp L    &kp ENTER
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &kp COLON               &kp SEMICOLON  &kp N         &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 6 INT_HENKAN  &lt 2 SPACE  &lt 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 DELETE                             &kp RIGHT_CONTROL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -267,10 +267,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &sk LC(LS(ESCAPE))  &sk LG(UP_ARROW)    &sk LG(TAB)          &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &sk LG(LEFT_ARROW)  &sk LG(DOWN_ARROW)  &sk LG(RIGHT_ARROW)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans              &trans              &trans               &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                               &trans
             >;
         };
 
@@ -286,7 +286,7 @@
         WindowsShortcut {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans              &sk LG(UP_ARROW)    &trans               &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LG(LEFT_ARROW)  &sk LG(DOWN_ARROW)  &sk LG(RIGHT_ARROW)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &sk LG(LEFT_ARROW)  &sk LG(DOWN_ARROW)  &sk LG(RIGHT_ARROW)  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans              &trans              &trans               &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                               &trans
             >;
