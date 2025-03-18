@@ -52,7 +52,7 @@
         };
 
         CAD {
-            bindings = <&kp LC(LA(DELETE))>;
+            bindings = <&CAD>;
             key-positions = <16 17 18 19>;
         };
 
@@ -178,7 +178,7 @@
         close: close {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_CONTROL &kp W>;
+            bindings = <&sk LEFT_CONTROL &kp W>;
             label = "CLOSE";
         };
 
@@ -187,6 +187,13 @@
             #binding-cells = <0>;
             bindings = <&kp LS(I) &kp N0 &kp N4 &kp N6 &kp N3 &kp T &kp R &kp N6 &kp ENTER>;
             label = "PROXYLOGIN";
+        };
+
+        CAD: CAD {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LCTRL &sk LEFT_ALT &kp DELETE>;
+            label = "CAD";
         };
     };
 
