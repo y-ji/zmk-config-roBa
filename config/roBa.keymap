@@ -143,35 +143,35 @@
         login: login {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp N1 &kp N7 &kp EXCL &kp LS(Q) &kp LS(A) &kp LS(Z) &kp N2 &kp W &kp S &kp X>;
+            bindings = <&none &kp N1 &kp N7 &kp EXCL &kp LS(Q) &kp LS(A) &kp LS(Z) &kp N2 &kp W &kp S &kp X &kp ENTER>;
             label = "LOGIN";
         };
 
         ant: ant {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp N8 &kp U &kp E &kp S &kp MINUS &kp A &kp J &kp AT &kp N0 &kp N9 &kp N0 &kp N9>;
+            bindings = <&none &kp N8 &kp U &kp E &kp S &kp MINUS &kp A &kp J &kp AT &kp N0 &kp N9 &kp N0 &kp N9 &kp ENTER>;
             label = "ANT";
         };
 
         centerB: centerB {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LBKT &kp RBKT &kp LEFT_ARROW>;
+            bindings = <&kp LBKT &kp RBKT &kp ENTER &kp LEFT_ARROW>;
             label = "CENTERB";
         };
 
         centerC: centerC {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACE &kp RBRC &kp LEFT_ARROW>;
+            bindings = <&kp LEFT_BRACE &kp RBRC &kp ENTER &kp LEFT_ARROW>;
             label = "CENTERC";
         };
 
         centerA: centerA {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LPAR &kp RPAR &kp LEFT_ARROW>;
+            bindings = <&kp LPAR &kp RPAR &kp ENTER &kp LEFT_ARROW>;
             label = "CENTERA";
         };
 
@@ -180,6 +180,13 @@
             #binding-cells = <0>;
             bindings = <&kt LEFT_CONTROL &kp W>;
             label = "CLOSE";
+        };
+
+        proxyLogin: proxyLogin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(I) &kp N0 &kp N4 &kp N6 &kp N3 &kp T &kp R &kp N6 &kp ENTER>;
+            label = "PROXYLOGIN";
         };
     };
 
