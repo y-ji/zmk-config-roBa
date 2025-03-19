@@ -213,13 +213,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
-        slow_pointer: slow_pointer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SLOW_POINTER";
-            bindings = <&set_pointing_speed 300>, <&set_pointing_speed 600>;
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-        };
     };
 
     keymap {
