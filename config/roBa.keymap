@@ -284,10 +284,10 @@
 
         WindowsShortcut {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans              &sk LG(UP_ARROW)    &trans               &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &sk LG(LEFT_ARROW)  &sk LG(DOWN_ARROW)  &sk LG(RIGHT_ARROW)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans              &trans              &trans               &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                               &trans
+&trans  &trans  &trans  &trans  &trans                      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                  &trans
             >;
         };
     };
