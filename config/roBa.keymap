@@ -36,8 +36,8 @@
             key-positions = <16 17 18>;
         };
 
-        ANTlogin {
-            bindings = <&ant>;
+        proxyLogin {
+            bindings = <&proxyLogin>;
             key-positions = <28 29 30>;
         };
 
@@ -49,11 +49,6 @@
         fwd {
             bindings = <&kp LA(RIGHT_ARROW)>;
             key-positions = <19 20 21>;
-        };
-
-        CAD {
-            bindings = <&CAD>;
-            key-positions = <16 17 18 19>;
         };
 
         L_par {
@@ -148,7 +143,11 @@
         login: login {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp N1 &kp N7 &kp EXCL &kp LS(Q) &kp LS(A) &kp LS(Z) &kp N2 &kp W &kp S &kp X &kp ENTER>;
+            bindings =
+                <&sk LC(LA(DELETE))>,
+                <&macro_wait_time 100>,
+                <&kp N1 &kp N7 &kp EXCL &kp LS(Q) &kp LS(A) &kp LS(Z) &kp N2 &kp W &kp S &kp X &kp ENTER>;
+
             label = "LOGIN";
         };
 
@@ -267,10 +266,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans     &trans                               &trans     &sk LC(LS(ESCAPE))  &sk LG(UP_ARROW)     &sk LG(TAB)          &trans
-&trans  &trans  &trans  &trans     &trans     &trans         &kp LC(Z)  &kp LC(Y)  &sk LG(LEFT_ARROW)  &sk LG(DOWN_ARROW)   &sk LG(RIGHT_ARROW)  &trans
+&trans  &trans  &trans  &trans     &trans                               &trans     &sk LC(LS(ESCAPE))  &kp LG(UP_ARROW)     &sk LG(TAB)          &trans
+&trans  &trans  &trans  &trans     &trans     &trans         &kp LC(Z)  &kp LC(Y)  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)   &kp LG(RIGHT_ARROW)  &trans
 &trans  &trans  &trans  &trans     &trans     &trans         &trans     &trans     &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &sk LC(LA(DELETE))   &trans
-&trans  &trans  &trans  &kp LC(C)  &kp LC(V)  &kp LC(A)      &sk LA(J)  &sk LA(K)                                                                &trans
+&trans  &trans  &trans  &kp LC(C)  &kp LC(V)  &kp LC(A)      &kp LA(J)  &kp LA(K)                                                                &trans
             >;
         };
 
