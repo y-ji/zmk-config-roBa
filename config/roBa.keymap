@@ -130,7 +130,7 @@
 
         rightClick {
             bindings = <&mkp RCLK>;
-            key-positions = <18 20>;
+            key-positions = <20 19>;
             require-prior-idle-ms = <100>;
         };
 
