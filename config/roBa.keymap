@@ -51,12 +51,6 @@
             require-prior-idle-ms = <100>;
         };
 
-        fwd {
-            bindings = <&kp LA(RIGHT_ARROW)>;
-            key-positions = <30 31>;
-            layers = <5>;
-        };
-
         L_par {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <18 19>;
@@ -121,16 +115,25 @@
         leftClick {
             bindings = <&mkp LCLK>;
             key-positions = <18 19>;
+            layers = <0>;
         };
 
         rightClick {
             bindings = <&mkp RCLK>;
             key-positions = <19 20>;
+            layers = <0>;
         };
 
         middleClick {
             bindings = <&mkp MCLK>;
-            key-positions = <19 18 20>;
+            key-positions = <18 7>;
+            layers = <0>;
+        };
+
+        fwd {
+            bindings = <&kp LA(RIGHT_ARROW)>;
+            key-positions = <19 20>;
+            layers = <5>;
         };
     };
 
