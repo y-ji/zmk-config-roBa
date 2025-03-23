@@ -48,6 +48,7 @@
             bindings = <&kp LA(LEFT_ARROW)>;
             key-positions = <18 19>;
             layers = <5>;
+            require-prior-idle-ms = <100>;
         };
 
         fwd {
@@ -130,11 +131,13 @@
         rightClick {
             bindings = <&mkp RCLK>;
             key-positions = <18 20>;
+            require-prior-idle-ms = <100>;
         };
 
         middleClick {
             bindings = <&mkp MCLK>;
             key-positions = <18 19 20>;
+            require-prior-idle-ms = <100>;
         };
     };
 
