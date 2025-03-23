@@ -6,7 +6,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-
 #define MOUSE 5
 #define SCROLL 6
 #define NUM 3
@@ -218,29 +217,11 @@
             bindings = <
 &kp Q             &kp W         &kp E         &kp R             &kp T                                               &kp Y         &kp U  &kp I      &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F             &kp G        &kp LEFT_SHIFT          &kp MINUS      &kp H         &kp J  &kp K      &kp L    &kp ENTER
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &kp COLON               &kp SEMICOLON  &kp N         &kp M  &kp COMMA  &kp DOT  &lt 1 SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 4 INT_HENKAN  &lt 3 SPACE  &lt 3 INT_MUHENKAN      &kp BACKSPACE  &lt 2 DELETE                             &kp RIGHT_CONTROL
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &kp COLON               &kp SEMICOLON  &kp N         &kp M  &kp COMMA  &kp DOT  &lt 6 SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 INT_HENKAN  &lt 1 SPACE  &lt 1 INT_MUHENKAN      &kp BACKSPACE  &lt 5 DELETE                             &kp RIGHT_CONTROL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
-        };
-
-        SCROLL {
-            bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                         &kp NUMBER_6        &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0
-&kp LC(A)     &kp LC(S)     &trans        &kp LC(F)     &trans        &trans      &kp LC(Y)  &kp LG(UP_ARROW)    &kp HOME        &kp UP_ARROW    &kp END          &trans
-&kp LC(Z)     &kp LC(X)     &kp LC(C)     &kp LC(V)     &trans        &trans      &trans     &kp LG(DOWN_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&trans        &trans        &trans        &trans        &trans        &trans      &trans     &kp RIGHT_SHIFT                                                      &trans
-            >;
-        };
-
-        MOUSE {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans           &mkp MB3       &kp LG(TAB)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1         &kp LC(LS(T))  &mkp MB2     &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LC(LS(TAB))  &kp LC(W)      &kp LC(TAB)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                               &trans
-            >;
         };
 
         NUM {
@@ -258,6 +239,42 @@
 &kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp RIGHT_SHIFT
 &kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &trans  &trans  &kp HOME        &trans          &kp END          &kp RSHFT
 &trans   &trans   &trans   &trans  &trans   &trans      &trans  &trans                                                   &trans
+            >;
+        };
+
+        none {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        none2 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        MOUSE {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans           &mkp MB3       &kp LG(TAB)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1         &kp LC(LS(T))  &mkp MB2     &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LC(LS(TAB))  &kp LC(W)      &kp LC(TAB)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                               &trans
+            >;
+        };
+
+        SCROLL {
+            bindings = <
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                         &kp NUMBER_6        &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0
+&kp LC(A)     &kp LC(S)     &trans        &kp LC(F)     &trans        &trans      &kp LC(Y)  &kp LG(UP_ARROW)    &kp HOME        &kp UP_ARROW    &kp END          &trans
+&kp LC(Z)     &kp LC(X)     &kp LC(C)     &kp LC(V)     &trans        &trans      &trans     &kp LG(DOWN_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&trans        &trans        &trans        &trans        &trans        &trans      &trans     &kp RIGHT_SHIFT                                                      &trans
             >;
         };
     };
