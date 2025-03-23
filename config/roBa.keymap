@@ -46,7 +46,7 @@
 
         back {
             bindings = <&kp LA(LEFT_ARROW)>;
-            key-positions = <18 19>;
+            key-positions = <18 19 20>;
         };
 
         fwd {
@@ -238,19 +238,19 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &mkp MB3  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &trans    &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                                  &trans               &trans           &mkp MB3       &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans              &trans               &mkp MB1         &kp LC(LS(T))  &mkp MB2     &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans              &trans               &kp LC(LS(TAB))  &kp LC(W)      &kp LC(TAB)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)                                               &trans
             >;
         };
 
         SCROLL {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                      &kp NUMBER_6  &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0
-&trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans        &trans          &kp UP_ARROW    &trans           &trans
-&trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans                                                         &trans
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                      &kp NUMBER_6     &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0
+&trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans           &kp HOME        &kp UP_ARROW    &kp END          &trans
+&trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&trans        &trans        &trans        &trans        &trans        &trans      &trans  &kp RIGHT_SHIFT                                                   &trans
             >;
         };
     };
