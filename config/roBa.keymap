@@ -53,7 +53,7 @@
 
         fwd {
             bindings = <&kp LA(RIGHT_ARROW)>;
-            key-positions = <20 21>;
+            key-positions = <30 31>;
             layers = <5>;
         };
 
@@ -118,11 +118,6 @@
             key-positions = <34 42>;
         };
 
-        close {
-            bindings = <&close>;
-            key-positions = <13 18>;
-        };
-
         leftClick {
             bindings = <&mkp LCLK>;
             key-positions = <18 19>;
@@ -130,14 +125,12 @@
 
         rightClick {
             bindings = <&mkp RCLK>;
-            key-positions = <20 19>;
-            require-prior-idle-ms = <100>;
+            key-positions = <19 20>;
         };
 
         middleClick {
             bindings = <&mkp MCLK>;
-            key-positions = <18 19 20>;
-            require-prior-idle-ms = <100>;
+            key-positions = <19 18 20>;
         };
     };
 
@@ -273,10 +266,10 @@
 
         SCROLL {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                         &kp NUMBER_6        &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0
-&kp LC(A)     &kp LC(S)     &trans        &kp LC(F)     &trans        &trans      &kp LC(Y)  &kp LG(UP_ARROW)    &kp HOME        &kp UP_ARROW    &kp END          &trans
-&kp LC(Z)     &kp LC(X)     &kp LC(C)     &kp LC(V)     &trans        &trans      &trans     &kp LG(DOWN_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&trans        &trans        &trans        &trans        &trans        &trans      &trans     &kp RIGHT_SHIFT                                                      &trans
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                    &kp NUMBER_6        &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0
+&kp LC(A)     &kp LC(S)     &trans        &kp LC(F)     &trans        &kp C_VOLUME_UP        &kp LC(Y)  &kp LG(UP_ARROW)    &kp HOME        &kp UP_ARROW    &kp END          &trans
+&kp LC(Z)     &kp LC(X)     &kp LC(C)     &kp LC(V)     &trans        &kp C_VOLUME_DOWN      &trans     &kp LG(DOWN_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&trans        &trans        &trans        &trans        &trans        &kp K_MUTE             &trans     &kp RIGHT_SHIFT                                                      &trans
             >;
         };
 
