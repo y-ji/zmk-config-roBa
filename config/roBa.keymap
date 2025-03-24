@@ -122,6 +122,28 @@
             key-positions = <18 7>;
             layers = <0>;
         };
+
+        kakko1 {
+            bindings = <&centerA>;
+            key-positions = <18 19 20>;
+            layers = <2>;
+        };
+
+        kakko2 {
+            bindings = <&centerB>;
+            key-positions = <30 31 32>;
+        };
+
+        kakko3 {
+            bindings = <&centerC>;
+            key-positions = <6 7 8>;
+        };
+
+        close {
+            bindings = <&close>;
+            key-positions = <29 30>;
+            layers = <5>;
+        };
     };
 
     macros {
@@ -203,7 +225,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp N1>, <&kp N2>, <&kp N3>;
+            bindings = <&kp INT_MUHENKAN>, <&mo 4>, <&mo 5>;
         };
     };
 
@@ -212,10 +234,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R             &kp T                                               &kp Y         &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F             &kp G        &kp LEFT_SHIFT          &kp MINUS      &kp H         &kp J  &kp K      &kp L    &kp ENTER
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &kp COLON               &kp SEMICOLON  &kp N         &kp M  &kp COMMA  &kp DOT  &lt 5 SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 INT_HENKAN  &lt 2 SPACE  &lt 3 INT_MUHENKAN      &kp BACKSPACE  &lt 4 DELETE                             &kp RIGHT_CONTROL
+&kp Q             &kp W         &kp E         &kp R             &kp T                                           &kp Y         &kp U  &kp I      &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F             &kp G        &kp LEFT_SHIFT      &kp MINUS      &kp H         &kp J  &kp K      &kp L    &kp ENTER
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &kp COLON           &kp SEMICOLON  &kp N         &kp M  &kp COMMA  &kp DOT  &lt 5 SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 INT_HENKAN  &lt 2 SPACE  &td0                &kp BACKSPACE  &lt 4 DELETE                             &kp RIGHT_CONTROL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -234,7 +256,7 @@
             bindings = <
 &kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                   &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &kp PLUS        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
 &trans                      &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                                     &kp PIPE
             >;
         };
@@ -251,8 +273,8 @@
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans              &trans              &trans               &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans              &sk LS(UP_ARROW)    &trans               &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &sk LS(LEFT_ARROW)  &sk LS(DOWN_ARROW)  &sk LS(RIGHT_ARROW)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LS(HOME)        &kp LS(UP_ARROW)    &kp LS(END)          &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                               &trans
             >;
         };
@@ -260,7 +282,7 @@
         SCROLL {
             bindings = <
 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                                 &kp NUMBER_6             &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0
-&kp LC(A)     &kp LC(S)     &trans        &kp LC(F)     &trans        &kp C_VOLUME_UP        &kp LG(DOWN)            &kp LG(UP_ARROW)         &kp HOME        &kp UP_ARROW    &kp END          &trans
+&kp LC(A)     &kp LC(S)     &trans        &kp LC(F)     &trans        &kp C_VOLUME_UP        &kp LG(DOWN)            &kp LG(UP_ARROW)         &kp HOME        &kp UP_ARROW    &kp END          &kp LG(TAB)
 &kp LC(Z)     &kp LC(X)     &kp LC(C)     &kp LC(V)     &trans        &kp C_VOLUME_DOWN      &kp LS(LG(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
 &trans        &trans        &trans        &trans        &trans        &kp K_MUTE             &kp LA(LEFT_ARROW)      &kp LA(RIGHT_ARROW)                                                       &trans
             >;
