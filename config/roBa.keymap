@@ -22,26 +22,31 @@
         tab {
             bindings = <&kp LS(TAB)>;
             key-positions = <11 12>;
+            layers = <0>;
         };
 
         shift_tab {
             bindings = <&kp TAB>;
             key-positions = <12 13>;
+            layers = <0>;
         };
 
         nobashi {
             bindings = <&kp MINUS>;
             key-positions = <1 2>;
+            layers = <0>;
         };
 
         TMClogin {
             bindings = <&login>;
             key-positions = <16 17 18>;
+            layers = <0>;
         };
 
         proxyLogin {
             bindings = <&proxyLogin>;
             key-positions = <28 29 30>;
+            layers = <0>;
         };
 
         L_par {
@@ -83,26 +88,31 @@
         esc {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
+            layers = <0>;
         };
 
         BT0 {
             bindings = <&bt BT_SEL 0>;
             key-positions = <9 0>;
+            layers = <0>;
         };
 
         BT1 {
             bindings = <&bt BT_SEL 1>;
             key-positions = <10 21>;
+            layers = <0>;
         };
 
         BT2 {
             bindings = <&bt BT_SEL 2>;
             key-positions = <22 33>;
+            layers = <0>;
         };
 
         BT3 {
             bindings = <&bt BT_SEL 3>;
             key-positions = <34 42>;
+            layers = <0>;
         };
 
         leftClick {
@@ -132,16 +142,48 @@
         kakko2 {
             bindings = <&centerB>;
             key-positions = <30 31 32>;
+            layers = <2>;
         };
 
         kakko3 {
             bindings = <&centerC>;
             key-positions = <6 7 8>;
+            layers = <2>;
         };
 
         close {
             bindings = <&close>;
-            key-positions = <29 30>;
+            key-positions = <30 31 32>;
+            layers = <5>;
+        };
+
+        back {
+            bindings = <&kp LA(LEFT_ARROW)>;
+            key-positions = <18 19>;
+            layers = <5>;
+        };
+
+        fwd {
+            bindings = <&kp LA(RIGHT_ARROW)>;
+            key-positions = <19 20>;
+            layers = <5>;
+        };
+
+        backTab {
+            bindings = <&kp LC(LS(TAB))>;
+            key-positions = <30 31>;
+            layers = <5>;
+        };
+
+        fwdTab {
+            bindings = <&kp LC(TAB)>;
+            key-positions = <31 32>;
+            layers = <5>;
+        };
+
+        winTab {
+            bindings = <&kp LG(TAB)>;
+            key-positions = <18 19 20>;
             layers = <5>;
         };
     };
@@ -224,8 +266,8 @@
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp INT_MUHENKAN>, <&mo 4>, <&mo 5>;
+            tapping-term-ms = <150>;
+            bindings = <&lt 5 SLASH>, <&mo 4>;
         };
     };
 
@@ -234,10 +276,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R             &kp T                                           &kp Y         &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F             &kp G        &kp LEFT_SHIFT      &kp MINUS      &kp H         &kp J  &kp K      &kp L    &kp ENTER
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &kp COLON           &kp SEMICOLON  &kp N         &kp M  &kp COMMA  &kp DOT  &lt 5 SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 INT_HENKAN  &lt 2 SPACE  &td0                &kp BACKSPACE  &lt 4 DELETE                             &kp RIGHT_CONTROL
+&kp Q             &kp W         &kp E         &kp R             &kp T                                             &kp Y         &kp U  &kp I      &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F             &kp G        &kp LEFT_SHIFT        &kp MINUS      &kp H         &kp J  &kp K      &kp L    &kp ENTER
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &kp COLON             &kp SEMICOLON  &kp N         &kp M  &kp COMMA  &kp DOT  &td0
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 INT_HENKAN  &lt 2 SPACE  &kp INT_MUHENKAN      &kp BACKSPACE  &lt 4 DELETE                             &kp RIGHT_CONTROL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -284,7 +326,7 @@
 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                                 &kp NUMBER_6             &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0
 &kp LC(A)     &kp LC(S)     &trans        &kp LC(F)     &trans        &kp C_VOLUME_UP        &kp LG(DOWN)            &kp LG(UP_ARROW)         &kp HOME        &kp UP_ARROW    &kp END          &kp LG(TAB)
 &kp LC(Z)     &kp LC(X)     &kp LC(C)     &kp LC(V)     &trans        &kp C_VOLUME_DOWN      &kp LS(LG(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&trans        &trans        &trans        &trans        &trans        &kp K_MUTE             &kp LA(LEFT_ARROW)      &kp LA(RIGHT_ARROW)                                                       &trans
+&trans        &trans        &trans        &trans        &trans        &kp K_MUTE             &trans                  &trans                                                                    &trans
             >;
         };
 
