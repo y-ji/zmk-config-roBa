@@ -49,7 +49,7 @@
 
         centerR {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <18 19>;
+            key-positions = <19 20>;
             layers = <2>;
         };
 
@@ -114,7 +114,7 @@
 
         middleClick {
             bindings = <&mkp MCLK>;
-            key-positions = <19 20 18>;
+            key-positions = <18 7>;
             layers = <0>;
         };
 
@@ -126,8 +126,13 @@
 
         close {
             bindings = <&kp LC(W)>;
-            key-positions = <19 18 20>;
+            key-positions = <18 20>;
             layers = <5>;
+        };
+
+        openMail {
+            bindings = <&kp LC(Q)>;
+            key-positions = <31 30>;
         };
     };
 
@@ -238,7 +243,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans     &trans     &trans              &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LA(J)  &kp LA(K)  &kp LA(L)           &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans     &trans     &kp LC(LA(DELETE))  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LA(M)  &trans     &kp LC(LA(DELETE))  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                            &trans
             >;
         };
@@ -248,7 +253,7 @@
 &kp N1          &kp N2  &kp N3  &kp N4  &kp N5                                                 &kp N6                   &kp N7          &kp N8          &kp N9           &kp N0
 &trans          &trans  &trans  &trans  &trans  &kp C_VOLUME_UP        &kp LG(DOWN_ARROW)      &kp LG(UP_ARROW)         &kp HOME        &kp UP_ARROW    &kp END          &kp LG(TAB)
 &kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &kp C_VOLUME_DOWN      &kp LG(LS(LEFT_ARROW))  &kp LS(LG(RIGHT_ARROW))  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&trans          &trans  &trans  &trans  &trans  &trans                 &trans                  &trans                                                                    &trans
+&trans          &trans  &trans  &trans  &trans  &trans                 &kp LA(LEFT_ARROW)      &kp LA(RIGHT_ARROW)                                                       &trans
             >;
         };
 
