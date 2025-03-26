@@ -232,7 +232,7 @@
 
         SNIPE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                         &trans         &trans           &trans       &trans  &trans
+&trans  &trans  &trans  &trans  &trans                         &trans         &trans           &kp F5       &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans         &kp LC(LS(TAB))  &kp LC(TAB)  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans         &kp LC(T)        &trans       &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &kp LC(W)  &kp LC(LS(T))                                        &trans
