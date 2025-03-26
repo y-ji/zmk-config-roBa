@@ -125,15 +125,14 @@
             layers = <5>;
         };
 
-        close {
-            bindings = <&kp LC(W)>;
-            key-positions = <18 20>;
-            layers = <5>;
-        };
-
         openMail {
             bindings = <&kp LC(Q)>;
             key-positions = <31 30>;
+        };
+
+        toSnipe {
+            bindings = <&mo 3>;
+            key-positions = <33 20>;
         };
     };
 
@@ -169,21 +168,21 @@
         center: centerA {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LPAR &kp RPAR>;
+            bindings = <&kp LPAR &kp RPAR &kp ENTER &kp LEFT_ARROW>;
             label = "CENTERA";
         };
 
         down: down {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LBKT &kp RIGHT_BRACKET>;
+            bindings = <&kp LBKT &kp RIGHT_BRACKET &kp ENTER &kp LEFT_ARROW>;
             label = "DOWN";
         };
 
         up: up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACE &kp RBRC>;
+            bindings = <&kp LEFT_BRACE &kp RBRC &kp ENTER &kp LEFT_ARROW>;
             label = "UP";
         };
     };
@@ -233,10 +232,10 @@
 
         SNIPE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                         &trans         &trans           &trans       &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans         &kp LC(LS(TAB))  &kp LC(TAB)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans         &kp LC(T)        &trans       &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(W)  &kp LC(LS(T))                                        &trans
             >;
         };
 
@@ -252,7 +251,7 @@
         SCROLL {
             bindings = <
 &kp N1          &kp N2  &kp N3  &kp N4  &kp N5                                                 &kp N6                   &kp N7          &kp N8          &kp N9           &kp N0
-&trans          &trans  &trans  &trans  &trans  &kp C_VOLUME_UP        &kp LG(DOWN_ARROW)      &kp LG(UP_ARROW)         &kp HOME        &kp UP_ARROW    &kp END          &kp LG(TAB)
+&trans          &trans  &trans  &trans  &trans  &kp C_VOLUME_UP        &kp LG(DOWN_ARROW)      &kp LG(UP_ARROW)         &kp HOME        &kp UP_ARROW    &lt 3 END        &kp LG(TAB)
 &kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &kp C_VOLUME_DOWN      &kp LG(LS(LEFT_ARROW))  &kp LS(LG(RIGHT_ARROW))  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
 &trans          &trans  &trans  &trans  &trans  &trans                 &kp LA(LEFT_ARROW)      &kp LA(RIGHT_ARROW)                                                       &trans
             >;
