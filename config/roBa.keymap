@@ -116,7 +116,7 @@
 
         middleClick {
             bindings = <&mkp MCLK>;
-            key-positions = <18 7>;
+            key-positions = <18 19 20>;
             layers = <0 3>;
         };
 
@@ -139,7 +139,7 @@
 
         rightEsc {
             bindings = <&kp ESCAPE>;
-            key-positions = <19 20 18>;
+            key-positions = <8 9>;
             layers = <5>;
         };
 
@@ -165,6 +165,36 @@
             bindings = <&kp DOWN_ARROW>;
             key-positions = <19 32>;
             layers = <0>;
+        };
+
+        CSplusTab {
+            bindings = <&kp LC(RS(TAB))>;
+            key-positions = <18 19>;
+            layers = <5>;
+        };
+
+        CplusTab {
+            bindings = <&kp LC(TAB)>;
+            key-positions = <19 20>;
+            layers = <5>;
+        };
+
+        newTab {
+            bindings = <&kp LC(T)>;
+            key-positions = <18 30>;
+            layers = <5>;
+        };
+
+        beforeTab {
+            bindings = <&kp LC(LS(T))>;
+            key-positions = <19 31>;
+            layers = <5>;
+        };
+
+        closeTab {
+            bindings = <&kp LC(W)>;
+            key-positions = <19 18 20>;
+            layers = <5>;
         };
     };
 
