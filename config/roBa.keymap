@@ -275,7 +275,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans     &trans     &trans              &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LA(J)  &kp LA(K)  &kp LA(L)           &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LA(M)  &trans     &kp LC(LA(DELETE))  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LA(M)  &kp LG(D)  &kp LC(LA(DELETE))  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                            &trans
             >;
         };
