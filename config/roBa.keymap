@@ -140,7 +140,7 @@
         rightEsc {
             bindings = <&kp ESCAPE>;
             key-positions = <8 9>;
-            layers = <5>;
+            layers = <0>;
         };
 
         left {
