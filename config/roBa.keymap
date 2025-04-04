@@ -138,7 +138,7 @@
 
         rightEsc {
             bindings = <&kp ESCAPE>;
-            key-positions = <19 20>;
+            key-positions = <19 20 18>;
             layers = <5>;
         };
     };
@@ -210,8 +210,8 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R             &kp T                                               &kp Y         &kp U             &mt I UP_ARROW    &kp O              &kp P
-&kp A             &kp S         &kp D         &kp F             &kp G        &kp LEFT_SHIFT          &kp MINUS      &kp H         &mt J LEFT_ARROW  &mt K DOWN_ARROW  &mt L RIGHT_ARROW  &lt 3 ENTER
+&kp Q             &kp W         &kp E         &kp R             &kp T                                               &kp Y         &kp U             &mt UP_ARROW I    &kp O              &kp P
+&kp A             &kp S         &kp D         &kp F             &kp G        &kp LEFT_SHIFT          &kp MINUS      &kp H         &mt LEFT_ARROW J  &mt DOWN_ARROW K  &mt RIGHT_ARROW L  &lt 3 ENTER
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &lt 3 COLON             &kp SEMICOLON  &kp N         &kp M             &kp COMMA         &kp DOT            &lt 5 SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 INT_HENKAN  &lt 2 SPACE  &lt 6 INT_MUHENKAN      &kp BACKSPACE  &lt 4 DELETE                                                         &kp RIGHT_CONTROL
             >;
