@@ -9,8 +9,9 @@
 #define NUM 6
 
 &mt {
-    flavor = "balanced";
-    quick-tap-ms = <0>;
+    flavor = "tap-preferred";     // タップを優先（これが一番効く）
+    tapping-term-ms = <250>;      // タップ判定の許容時間を少し長めに（好みに応じて200〜300）
+    quick-tap-ms = <150>;         // オプション：素早いタップを確実にタップ扱い
 };
 
 / {
