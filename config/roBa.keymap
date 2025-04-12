@@ -196,6 +196,16 @@
             key-positions = <19 18 20>;
             layers = <5>;
         };
+
+        BS {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <23 24>;
+        };
+
+        delCombo {
+            bindings = <&kp DELETE>;
+            key-positions = <24 25>;
+        };
     };
 
     macros {
