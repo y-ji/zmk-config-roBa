@@ -206,6 +206,16 @@
             bindings = <&kp DELETE>;
             key-positions = <24 25>;
         };
+
+        plus {
+            bindings = <&kp PLUS>;
+            key-positions = <22 21>;
+        };
+
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <22 9>;
+        };
     };
 
     macros {
