@@ -208,14 +208,9 @@
             key-positions = <24 25>;
         };
 
-        plus {
-            bindings = <&kp PLUS>;
-            key-positions = <22 21>;
-        };
-
-        equal {
-            bindings = <&kp EQUAL>;
-            key-positions = <22 9>;
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <23 24 25>;
         };
     };
 
@@ -297,10 +292,10 @@
 
         FUNCTION {
             bindings = <
-&kp F1   &kp F2   &kp F3          &kp F4      &kp F5                                   &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&kp F11  &kp F12  &kp LC(LS(F8))  &kp F8      &kp F9  &kp LC(PAUSE_BREAK)      &trans  &trans  &trans  &trans  &trans  &trans
-&trans   &trans   &trans          &kp LS(F8)  &trans  &trans                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans   &trans   &trans          &trans      &trans  &trans                   &trans  &trans                          &trans
+&kp F1   &kp F2   &kp F3          &kp F4      &kp F5                                      &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&kp F11  &kp F12  &kp LC(LS(F8))  &kp F8      &kp F9     &kp LC(PAUSE_BREAK)      &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &trans   &trans          &kp LS(F8)  &kp LC(Z)  &kp LC(Y)                &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &trans   &trans          &trans      &trans     &trans                   &trans  &trans                          &trans
             >;
         };
 
