@@ -9,10 +9,10 @@
 #define NUM 6
 
 &mt {
-    flavor = "balanced";     // 
-    tapping-term-ms = <150>;      // タップ判定の許容時間を少し長めに（好みに応じて200〜300）
-    quick-tap-ms = <150>;         // オプション：素早いタップを確実にタップ扱い
-    //require-prior-idle-ms = <125>;    // 直前の入力からこの時間以内にMTキーを押下すると、即座にタップ扱いとなる
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <150>;
+    require-prior-idle-ms = <150>;  // 高速連打中は常にタップ扱い
 };
 
 / {
