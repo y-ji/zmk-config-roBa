@@ -12,6 +12,7 @@
     flavor = "tap-preferred";
     tapping-term-ms = <200>;
     quick-tap-ms = <150>;
+
     //require-prior-idle-ms = <150>;  // 高速連打中は常にタップ扱い　でもこれやると高速連打中にはてなが全く打てなくなるのでやめとく
 };
 
@@ -138,12 +139,6 @@
             key-positions = <33 20>;
         };
 
-        rightEsc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <8 9>;
-            layers = <0>;
-        };
-
         left {
             bindings = <&kp LEFT_ARROW>;
             key-positions = <30 31>;
@@ -212,6 +207,11 @@
             bindings = <&kp ENTER>;
             key-positions = <23 24 25>;
         };
+
+        shainNum {
+            bindings = <&shainNum>;
+            key-positions = <5 6 7>;
+        };
     };
 
     macros {
@@ -263,6 +263,13 @@
             bindings = <&kp LEFT_BRACE &kp RBRC &kp ENTER &kp LEFT_ARROW>;
             label = "UP";
         };
+
+        shainNum: shainNum {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N1 &kp N6 &kp N2 &kp N9 &kp N3 &kp N1 &kp N7 &kp TAB>;
+            label = "SHAINNUM";
+        };
     };
 
     behaviors {
@@ -302,8 +309,8 @@
         NUM {
             bindings = <
 &kp EXCLAMATION             &kp DOUBLE_QUOTES  &kp HASH         &kp DOLLAR       &kp PERCENT                                                &kp AMPERSAND    &kp SINGLE_QUOTE  &kp TILDE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SLASH                   &kp KP_NUMBER_4    &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION  &kp AT_SIGN       &kp HASH   &kp DOLLAR            &kp PERCENT
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1    &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &kp EQUAL       &kp DQT          &kp SINGLE_QUOTE  &kp PLUS   &kp ASTERISK          &kp BACKSLASH
+&kp SLASH                   &kp KP_NUMBER_4    &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp EQUAL       &kp EXCLAMATION  &kp AT_SIGN       &kp HASH   &kp DOLLAR            &kp PERCENT
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1    &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &kp UNDERSCORE  &kp DQT          &kp SINGLE_QUOTE  &kp PLUS   &kp ASTERISK          &kp BACKSLASH
 &trans                      &trans             &trans           &trans           &trans        &trans                       &trans          &trans                                                              &kp PIPE
             >;
         };
@@ -337,10 +344,10 @@
 
         layer_6 {
             bindings = <
-&trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+&bt BT_CLR  &bt BT_CLR_ALL  &trans  &trans  &trans                      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans      &trans          &trans  &trans  &trans  &trans      &trans  &trans        &trans        &trans        &trans        &trans
+&trans      &trans          &trans  &trans  &trans  &trans      &trans  &trans        &trans        &trans        &trans        &trans
+&trans      &trans          &trans  &trans  &trans  &trans      &trans  &trans                                                  &trans
             >;
         };
     };
