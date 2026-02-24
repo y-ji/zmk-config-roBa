@@ -60,7 +60,6 @@
         zephyr,axis-x = <0>;
         zephyr,axis-y = <1>;
         snipe-layers = <3 6>;
-        //automouse-layer = <4>;
         scroll-layers = <5>;
     };
 };
