@@ -22,7 +22,9 @@
         device = <&trackball>;
 
         /* 通常時（カーソル移動）の調整。必要なら後で変更 */
-        input-processors = <&zip_xy_scaler 1 1>;
+        input-processors = 
+            <&zip_xy_transformer INPUT_TRANSFORM_Y_INVERT>,
+            <&zip_xy_scaler 1 1>;
 
         /* レイヤー5のときだけスクロール化 */
         scroller {
