@@ -10,7 +10,7 @@
 #define NUM 6
 
 &zip_mouse_gesture {
-    stroke-size = <250>;
+    stroke-size = <100>;
     idle-timeout-ms = <120>;
     enable-eager-mode;
 
@@ -167,7 +167,7 @@
         };
 
         toGesture {
-            bindings = <&mo 8>;
+            bindings = <&gesture_hold>;
             key-positions = <33 20>;
         };
 
@@ -260,18 +260,14 @@
         };
 
         gesture_hold: gesture_hold {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&mouse_gesture_on>,
-                <&macro_press>,
-                <&mo 8>,
-                <&macro_pause_for_release>,
-                <&macro_tap>,
-                <&mouse_gesture_off>,
-                <&macro_release>,
-                <&mo 8>;
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings =
+            <&macro_tap &mouse_gesture_on>
+            , <&macro_press &mo 8>
+            , <&macro_pause_for_release>
+            , <&macro_tap &mouse_gesture_off>
+            , <&macro_release &mo 8>;
         };
 
         login: login {
