@@ -1,7 +1,22 @@
 #include "roBa.dtsi"
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 &default_transform {
     col-offset = <6>;
+};
+
+/ {
+  input_processors {
+    zip_xy_suppress_mapper: zip_xy_suppress_mapper {
+      compatible = "zmk,input-processor-code-mapper";
+      #input-processor-cells = <0>;
+      type = <INPUT_EV_REL>;
+      map = <
+        INPUT_REL_X INPUT_REL_RX
+        INPUT_REL_Y INPUT_REL_RY
+      >;
+    };
+  };
 };
 
 &kscan0 {
@@ -19,6 +34,13 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
+        gesture_mode {
+            layers = <8>;
+            input-processors = <
+                &zip_mouse_gesture
+                &zip_xy_suppress_mapper
+            >;
+        };
     };
 };
 
