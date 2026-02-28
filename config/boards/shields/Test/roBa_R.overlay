@@ -1,5 +1,6 @@
 #include "roBa.dtsi"
 #include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <mouse-gesture.dtsi>
 
 &default_transform {
     col-offset = <6>;
@@ -15,6 +16,31 @@
         INPUT_REL_X INPUT_REL_RX
         INPUT_REL_Y INPUT_REL_RY
       >;
+    };
+    /* ★ 追加：Layer 7用ジェスチャープロセッサ（新しいノードラベル） */
+    zip_mouse_gesture_win: zip_mouse_gesture_win {
+      compatible = "zmk,input-processor-mouse-gesture";
+
+      stroke-size = <100>;
+      idle-timeout-ms = <120>;
+      enable-eager-mode;
+
+      up {
+        pattern = <GESTURE_UP>;
+        bindings = <&kp LG(TAB)>;                 /* Win+Tab */
+      };
+      right {
+        pattern = <GESTURE_RIGHT>;
+        bindings = <&kp LG(LC(RIGHT_ARROW))>;     /* Win+Ctrl+→ */
+      };
+      left {
+        pattern = <GESTURE_LEFT>;
+        bindings = <&kp LG(LC(LEFT_ARROW))>;      /* Win+Ctrl+← */
+      };
+      down {
+        pattern = <GESTURE_DOWN>;
+        bindings = <&kp LG(D)>;                   /* Win+D */
+      };
     };
   };
 };
