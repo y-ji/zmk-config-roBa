@@ -9,61 +9,52 @@
 #define SCROLL 5
 #define NUM 6
 
+/* layer 8: browser */
 &zip_mouse_gesture {
     stroke-size = <50>;
     idle-timeout-ms = <120>;
     enable-eager-mode;
 
-    /* ===== Layer 8 : Browser ===== */
-    browser_up {
-        layers = <8>;
+    up {
         pattern = <GESTURE_UP>;
         bindings = <&kp LC(T)>;            /* 新しいタブ */
     };
-
-    browser_right {
-        layers = <8>;
+    right {
         pattern = <GESTURE_RIGHT>;
         bindings = <&kp LC(TAB)>;          /* Ctrl+Tab */
     };
-
-    browser_left {
-        layers = <8>;
+    left {
         pattern = <GESTURE_LEFT>;
         bindings = <&kp LC(LS(TAB))>;      /* Ctrl+Shift+Tab */
     };
-
-    browser_down {
-        layers = <8>;
+    down {
         pattern = <GESTURE_DOWN>;
         bindings = <&kp LC(W)>;            /* 閉じる（現状維持） */
     };
+};
 
-    /* ===== Layer 7 : Windows Desktop ===== */
-    win_up {
-        layers = <7>;
+/* layer 7: windows desktop */
+&zip_mouse_gesture_win {
+    stroke-size = <50>;
+    idle-timeout-ms = <120>;
+    enable-eager-mode;
+
+    up {
         pattern = <GESTURE_UP>;
         bindings = <&kp LG(TAB)>;          /* Win+Tab */
     };
-
-    win_right {
-        layers = <7>;
+    right {
         pattern = <GESTURE_RIGHT>;
         bindings = <&kp LG(LC(RIGHT_ARROW))>; /* Win+Ctrl+→ */
     };
-
-    win_left {
-        layers = <7>;
+    left {
         pattern = <GESTURE_LEFT>;
         bindings = <&kp LG(LC(LEFT_ARROW))>;  /* Win+Ctrl+← */
     };
-
-    win_down {
-        layers = <7>;
+    down {
         pattern = <GESTURE_DOWN>;
         bindings = <&kp LG(D)>;            /* Win+D */
     };
-
 };
 
 &mt {
