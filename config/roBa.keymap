@@ -9,26 +9,6 @@
 #define SCROLL 5
 #define NUM 6
 
-#define JP_AT          &kp LBKT          /* あなたの観測で確定: [位置が @ になる */
-#define JP_LBRACKET    &kp RBKT          /* JISの [ は ]位置に寄る想定 */
-#define JP_RBRACKET    &kp BSLS          /* JISの ] は \ 位置に寄る想定 */
-#define JP_COLON       &kp SQT           /* JISの : は ;/: 位置（SQT） */
-#define JP_PLUS        &kp LS(SQT)       /* JISの + は Shift + :（同キー） */
-#define JP_ASTERISK    &kp LS(COLON)     /* “* は Shift + :”系。環境により LS(SQT) 側に寄せてもOK */
-#define JP_DQUOTE      &kp LS(N2)        /* JISの " は Shift+2 が定番 */
-#define JP_QUOTE       &kp LS(N7)        /* JISの ' は Shift+7 が定番 */
-#define JP_AMPERSAND   &kp LS(N6)        /* JISの & は Shift+6 が定番 */
-#define JP_LPAREN      &kp LS(N8)        /* ( は Shift+8 */
-#define JP_RPAREN      &kp LS(N9)        /* ) は Shift+9 */
-#define JP_EQUAL       &kp LS(MINUS)     /* JISの = は Shift+- が定番 */
-#define JP_CARET       &kp EQUAL         /* JISの ^ は “=の位置キー” で出ることが多い */
-#define JP_TILDE       &kp LS(EQUAL)     /* JISの ~ は Shift+^（=位置） */
-#define JP_BACKQUOTE   &kp GRAVE         /* ` はバッククォート位置（USの`）で出せることが多い */
-/* ¥ と | と _ はWindows/フォント/IMEで揺れるので、まずはこれで当てに行く */
-#define JP_YEN         &kp BSLS          /* “¥/\ キー位置”を送る（表示が¥になることが多い） */
-#define JP_PIPE        &kp LS(BSLS)      /* Shift + ¥/\ で | */
-#define JP_UNDERSCORE  &kp LS(MINUS)     /* まずは Shift+-（多くの環境で _） */
-
 &zip_mouse_gesture {
     stroke-size = <100>;
     idle-timeout-ms = <120>;
