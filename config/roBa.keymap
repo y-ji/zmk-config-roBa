@@ -33,30 +33,6 @@
     };
 };
 
-/* layer 7: windows desktop */
-&zip_mouse_gesture_win {
-    stroke-size = <50>;
-    idle-timeout-ms = <120>;
-    enable-eager-mode;
-
-    up {
-        pattern = <GESTURE_UP>;
-        bindings = <&kp LG(TAB)>;          /* Win+Tab */
-    };
-    right {
-        pattern = <GESTURE_RIGHT>;
-        bindings = <&kp LG(LC(RIGHT_ARROW))>; /* Win+Ctrl+→ */
-    };
-    left {
-        pattern = <GESTURE_LEFT>;
-        bindings = <&kp LG(LC(LEFT_ARROW))>;  /* Win+Ctrl+← */
-    };
-    down {
-        pattern = <GESTURE_DOWN>;
-        bindings = <&kp LG(D)>;            /* Win+D */
-    };
-};
-
 &mt {
     flavor = "tap-preferred";
     tapping-term-ms = <200>;
