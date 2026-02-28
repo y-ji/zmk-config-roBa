@@ -164,6 +164,11 @@
             key-positions = <33 20>;
         };
 
+        toGesture7 {
+            bindings = <&gesture_hold7>;
+            key-positions = <33 19 20>;
+        };
+
         left {
             bindings = <&kp LEFT_ARROW>;
             key-positions = <30 31>;
@@ -261,6 +266,17 @@
             , <&macro_pause_for_release>
             , <&macro_tap &mouse_gesture_off>
             , <&macro_release &mo 8>;
+        };
+
+        gesture_hold7: gesture_hold7 {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings =
+            <&macro_tap &mouse_gesture_on>
+            , <&macro_press &mo 7>
+            , <&macro_pause_for_release>
+            , <&macro_tap &mouse_gesture_off>
+            , <&macro_release &mo 7>;
         };
 
         login: login {
