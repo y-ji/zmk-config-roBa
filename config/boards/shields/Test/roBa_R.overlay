@@ -22,6 +22,7 @@
     /* ★ 追加：Layer 7用ジェスチャープロセッサ（新しいノードラベル） */
     zip_mouse_gesture_win: zip_mouse_gesture_win {
       compatible = "zmk,input-processor-mouse-gesture";
+      #input-processor-cells = <0>;
 
       stroke-size = <50>;
       idle-timeout-ms = <120>;
