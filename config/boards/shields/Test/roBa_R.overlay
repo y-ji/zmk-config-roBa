@@ -36,6 +36,14 @@
         pattern = <GESTURE_DOWN>;
         bindings = <&kp LG(D)>;                   /* Win+D */
       };
+      right {
+        pattern = <GESTURE_RIGHT>;
+        bindings = <&win_ctrl_right>;
+      };  
+      left {
+        pattern = <GESTURE_LEFT>;
+        bindings = <&win_ctrl_left>;
+      };
     };
   };
 };
