@@ -257,6 +257,29 @@
             label = "TO_LAYER_0";
         };
 
+        win_ctrl_right: win_ctrl_right {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings =
+            <&macro_press &kp LGUI>
+            , <&macro_press &kp LCTRL>
+            , <&macro_tap   &kp RIGHT_ARROW>
+            , <&macro_release &kp LCTRL>
+            , <&macro_release &kp LGUI>;
+          label = "WIN_CTRL_RIGHT";
+        };
+        
+        win_ctrl_left: win_ctrl_left {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings =
+            <&macro_press &kp LGUI>
+            , <&macro_press &kp LCTRL>
+            , <&macro_tap   &kp LEFT_ARROW>
+            , <&macro_release &kp LCTRL>
+            , <&macro_release &kp LGUI>;
+          label = "WIN_CTRL_LEFT";
+        };
         gesture_hold: gesture_hold {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
