@@ -10,6 +10,7 @@
 #define NUM 6
 
 /* layer 8: browser */
+
 &zip_mouse_gesture {
     stroke-size = <50>;
     idle-timeout-ms = <120>;
@@ -19,14 +20,17 @@
         pattern = <GESTURE_UP>;
         bindings = <&kp LC(T)>;            /* 新しいタブ */
     };
+
     right {
         pattern = <GESTURE_RIGHT>;
         bindings = <&kp LC(TAB)>;          /* Ctrl+Tab */
     };
+
     left {
         pattern = <GESTURE_LEFT>;
         bindings = <&kp LC(LS(TAB))>;      /* Ctrl+Shift+Tab */
     };
+
     down {
         pattern = <GESTURE_DOWN>;
         bindings = <&kp LC(W)>;            /* 閉じる（現状維持） */
@@ -247,6 +251,18 @@
             bindings = <&kp LG(L)>;
             key-positions = <7 8 9>;
         };
+
+        Desktop_to_Left {
+            bindings = <&kp LG(LC(LEFT_ARROW))>;
+            key-positions = <30 31>;
+            layers = <5>;
+        };
+
+        Desktop_to_Right {
+            bindings = <&kp LG(LC(RIGHT_ARROW))>;
+            key-positions = <31 32>;
+            layers = <5>;
+        };
     };
 
     macros {
@@ -258,48 +274,69 @@
         };
 
         win_ctrl_right: win_ctrl_right {
-          compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings =
-            <&macro_press &kp LGUI>
-            , <&macro_press &kp LCTRL>
-            , <&macro_tap   &kp RIGHT_ARROW>
-            , <&macro_release &kp LCTRL>
-            , <&macro_release &kp LGUI>;
-          label = "WIN_CTRL_RIGHT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp RIGHT_ARROW>,
+                <&macro_release>,
+                <&kp LCTRL>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "WIN_CTRL_RIGHT";
         };
-        
+
         win_ctrl_left: win_ctrl_left {
-          compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings =
-            <&macro_press &kp LGUI>
-            , <&macro_press &kp LCTRL>
-            , <&macro_tap   &kp LEFT_ARROW>
-            , <&macro_release &kp LCTRL>
-            , <&macro_release &kp LGUI>;
-          label = "WIN_CTRL_LEFT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp LEFT_ARROW>,
+                <&macro_release>,
+                <&kp LCTRL>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "WIN_CTRL_LEFT";
         };
+
         gesture_hold: gesture_hold {
-          compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings =
-            <&macro_tap &mouse_gesture_on>
-            , <&macro_press &mo 8>
-            , <&macro_pause_for_release>
-            , <&macro_tap &mouse_gesture_off>
-            , <&macro_release &mo 8>;
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&mouse_gesture_on>,
+                <&macro_press>,
+                <&mo 8>,
+                <&macro_pause_for_release>,
+                <&macro_tap>,
+                <&mouse_gesture_off>,
+                <&macro_release>,
+                <&mo 8>;
         };
 
         gesture_hold7: gesture_hold7 {
-          compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings =
-            <&macro_tap &mouse_gesture_on>
-            , <&macro_press &mo 7>
-            , <&macro_pause_for_release>
-            , <&macro_tap &mouse_gesture_off>
-            , <&macro_release &mo 7>;
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&mouse_gesture_on>,
+                <&macro_press>,
+                <&mo 7>,
+                <&macro_pause_for_release>,
+                <&macro_tap>,
+                <&mouse_gesture_off>,
+                <&macro_release>,
+                <&mo 7>;
         };
 
         login: login {
@@ -328,20 +365,6 @@
             #binding-cells = <0>;
             bindings = <&kp LBKT &kp RIGHT_BRACKET &kp ENTER &kp LEFT_ARROW>;
             label = "DOWN";
-        };
-
-        up: up {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACE &kp RBRC &kp ENTER &kp LEFT_ARROW>;
-            label = "UP";
-        };
-
-        shainNum: shainNum {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp N1 &kp N6 &kp N2 &kp N9 &kp N3 &kp N1 &kp N7 &kp TAB>;
-            label = "SHAINNUM";
         };
     };
 
@@ -435,10 +458,10 @@
 
         layer_8 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                               &trans       &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans           &trans       &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans           &trans       &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(LS(TAB))  &kp LC(TAB)                          &trans
+&trans  &trans  &trans  &trans  &trans                               &kp LC(LS(T))  &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(T)        &kp LC(C)      &kp LC(X)  &kp LC(P)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(W)        &trans         &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(LS(TAB))  &kp LC(TAB)                                  &trans
             >;
         };
     };
