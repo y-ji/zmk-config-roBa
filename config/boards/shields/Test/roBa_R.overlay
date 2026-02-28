@@ -34,10 +34,18 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        gesture_mode {
-            layers = <7 8>;
+        gesture_mode_8 {
+            layers = <8>;
             input-processors = <
                 &zip_mouse_gesture
+                &zip_xy_suppress_mapper
+            >;
+        };
+        
+        gesture_mode_7 {
+            layers = <7>;
+            input-processors = <
+                &zip_mouse_gesture_win
                 &zip_xy_suppress_mapper
             >;
         };
