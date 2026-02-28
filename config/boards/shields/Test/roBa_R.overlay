@@ -35,7 +35,7 @@
         device = <&trackball>;
 
         gesture_mode {
-            layers = <8>;
+            layers = <7 8>;
             input-processors = <
                 &zip_mouse_gesture
                 &zip_xy_suppress_mapper
