@@ -10,34 +10,60 @@
 #define NUM 6
 
 &zip_mouse_gesture {
-    stroke-size = <100>;
+    stroke-size = <50>;
     idle-timeout-ms = <120>;
     enable-eager-mode;
 
-    up {
+    /* ===== Layer 8 : Browser ===== */
+    browser_up {
+        layers = <8>;
         pattern = <GESTURE_UP>;
-        bindings = <&kp LC(P)>;     // 検索
+        bindings = <&kp LC(T)>;            /* 新しいタブ */
     };
 
-    down {
-        pattern = <GESTURE_DOWN>;
-        bindings = <&kp LC(W)>;     // 閉じる
-    };
-
-    left {
-        pattern = <GESTURE_LEFT>;
-        bindings = <&kp LA(TAB)>;   // 戻る
-    };
-
-    right {
+    browser_right {
+        layers = <8>;
         pattern = <GESTURE_RIGHT>;
-        bindings = <&kp LC(TAB)>;   // 進む
+        bindings = <&kp LC(TAB)>;          /* Ctrl+Tab */
     };
 
-    boot {
-        pattern = <GESTURE_DOWN GESTURE_RIGHT GESTURE_UP>;
-        bindings = <&bootloader>;
+    browser_left {
+        layers = <8>;
+        pattern = <GESTURE_LEFT>;
+        bindings = <&kp LC(LS(TAB))>;      /* Ctrl+Shift+Tab */
     };
+
+    browser_down {
+        layers = <8>;
+        pattern = <GESTURE_DOWN>;
+        bindings = <&kp LC(W)>;            /* 閉じる（現状維持） */
+    };
+
+    /* ===== Layer 7 : Windows Desktop ===== */
+    win_up {
+        layers = <7>;
+        pattern = <GESTURE_UP>;
+        bindings = <&kp LG(TAB)>;          /* Win+Tab */
+    };
+
+    win_right {
+        layers = <7>;
+        pattern = <GESTURE_RIGHT>;
+        bindings = <&kp LG(LC(RIGHT_ARROW))>; /* Win+Ctrl+→ */
+    };
+
+    win_left {
+        layers = <7>;
+        pattern = <GESTURE_LEFT>;
+        bindings = <&kp LG(LC(LEFT_ARROW))>;  /* Win+Ctrl+← */
+    };
+
+    win_down {
+        layers = <7>;
+        pattern = <GESTURE_DOWN>;
+        bindings = <&kp LG(D)>;            /* Win+D */
+    };
+
 };
 
 &mt {
