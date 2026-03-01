@@ -9,6 +9,9 @@
             , <&gpio0 10 GPIO_ACTIVE_HIGH>
             , <&gpio0 9 GPIO_ACTIVE_HIGH>
             ;
+        /* チャタリング対策（まずは15ms推奨） */
+        debounce-press-ms = <15>;
+        debounce-release-ms = <15>;
 };
 
 &left_encoder {
