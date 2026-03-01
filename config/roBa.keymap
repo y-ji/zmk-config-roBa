@@ -245,6 +245,11 @@
             key-positions = <31 32>;
             layers = <5>;
         };
+
+        langSwitch {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <21 20 19>;
+        };
     };
 
     macros {
@@ -433,10 +438,10 @@
 
         layer_8 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                               &kp LC(LS(T))  &trans     &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(T)        &kp LC(C)      &kp LC(X)  &kp LC(P)  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(W)        &trans         &trans     &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(LS(TAB))  &kp LC(TAB)                                  &trans
+&trans  &trans  &trans  &trans  &trans                               &kp LC(LS(T))  &trans     &trans         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(T)        &kp LC(C)      &kp LC(X)  &kp LC(P)      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(W)        &kp LC(Z)      &kp LC(Y)  &kp LC(LS(X))  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(LS(TAB))  &kp LC(TAB)                                      &trans
             >;
         };
     };
