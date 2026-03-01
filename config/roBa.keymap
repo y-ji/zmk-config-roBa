@@ -86,12 +86,6 @@
             layers = <2>;
         };
 
-        centerBoth {
-            bindings = <&center>;
-            key-positions = <18 19 20>;
-            layers = <2>;
-        };
-
         downL {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <30 31>;
@@ -104,12 +98,6 @@
             layers = <2>;
         };
 
-        downBoth {
-            bindings = <&down>;
-            key-positions = <30 31 32>;
-            layers = <2>;
-        };
-
         upL {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <7 6>;
@@ -119,12 +107,6 @@
         upR {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <7 8>;
-            layers = <2>;
-        };
-
-        upBoth {
-            bindings = <&up>;
-            key-positions = <6 7 8>;
             layers = <2>;
         };
 
@@ -353,18 +335,11 @@
             label = "PROXYLOGIN";
         };
 
-        center: centerA {
+        shainNum: shainNum {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LPAR &kp RPAR &kp ENTER &kp LEFT_ARROW>;
-            label = "CENTERA";
-        };
-
-        down: down {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LBKT &kp RIGHT_BRACKET &kp ENTER &kp LEFT_ARROW>;
-            label = "DOWN";
+            bindings = <&kp N1 &kp N6 &kp N2 &kp N9 &kp N3 &kp N1 &kp N7 &kp TAB>;
+            label = "SHAINNUM";
         };
     };
 
