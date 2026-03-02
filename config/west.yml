@@ -25,6 +25,7 @@ manifest:
     - name: zmk-layout-shift
       remote: kot149
       revision: v1
+      path: modules/zmk-layout-shift
 
   self:
     path: config
