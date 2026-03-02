@@ -262,6 +262,20 @@
             label = "TO_LAYER_0";
         };
 
+        jis_on_henkan: jis_on_henkan {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog_ls_on &kp INT_HENKAN>;
+            label = "JIS_ON_HENKAN";
+        };
+
+        jis_on_muhenkan: jis_on_muhenkan {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog_ls_on &kp INT_MUHENKAN>;
+            label = "JIS_ON_MUHENKAN";
+        };
+
         win_ctrl_right: win_ctrl_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -369,7 +383,7 @@
 &kp Q             &kp W         &kp E         &kp R             &kp T                                               &kp Y         &kp U  &kp I      &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F             &kp G        &kp LEFT_SHIFT          &kp MINUS      &kp H         &kp J  &kp K      &kp L    &kp ENTER
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &lt 3 COLON             &kp SEMICOLON  &kp N         &kp M  &kp COMMA  &kp DOT  &lt 5 SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 INT_HENKAN  &lt 2 SPACE  &lt 6 INT_MUHENKAN      &kp BACKSPACE  &lt 4 DELETE                             &kp RIGHT_CONTROL
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 jis_on_henkan  &lt 2 SPACE  &lt 6 jis_on_muhenkan      &kp BACKSPACE  &lt 4 DELETE                             &kp RIGHT_CONTROL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -425,7 +439,7 @@
 &trans  &trans  &trans  &trans  &trans                              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &trans  &trans  &trans  &trans  &bt BT_CLR          &trans  &trans        &trans        &trans        &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &bt BT_CLR_ALL      &trans  &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans              &tog_ls_on  &tog_ls_off                                                  &trans
+&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans                                                  &trans
             >;
         };
 
