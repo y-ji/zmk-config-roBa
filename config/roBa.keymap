@@ -256,7 +256,7 @@
         };
 
         paste {
-            bindings = <&kp LC(P)>;
+            bindings = <&kp LC(V)>;
             key-positions = <41 18 19>;
         };
     };
@@ -479,10 +479,10 @@
 
         layer_8 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                               &kp LC(LS(T))  &trans     &trans         &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(T)        &kp LC(C)      &kp LC(X)  &kp LC(P)      &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(W)        &kp LC(Z)      &kp LC(Y)  &kp LC(LS(X))  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(LS(TAB))  &kp LC(TAB)                                      &trans
+&trans  &trans  &trans  &trans  &trans                               &trans       &kp LC(LS(T))  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans           &trans       &kp LC(T)      &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans           &trans       &kp LC(W)      &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(LS(TAB))  &kp LC(TAB)                                 &trans
             >;
         };
     };
