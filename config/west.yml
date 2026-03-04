@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/kumamuk-git
     - name: kot149
       url-base: https://github.com/kot149
+    - name: oleksandrmaslov
+      url-base: https://github.com/oleksandrmaslov
 
   projects:
     - name: zmk
@@ -26,6 +28,10 @@ manifest:
       remote: kot149
       revision: v1
       path: modules/zmk-layout-shift
+
+    - name: zmk-pointing-acceleration
+      remote: oleksandrmaslov
+      revision: main
 
   self:
     path: config
