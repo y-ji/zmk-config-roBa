@@ -14,23 +14,23 @@
 /* layer 8: browser */
 
 &zip_mouse_gesture {
-    stroke-size = <20>;
+    stroke-size = <10>;
     idle-timeout-ms = <120>;
     enable-eager-mode;
 
     up {
         pattern = <GESTURE_UP>;
-        bindings = <&kp LC(T)>;            /* 新しいタブ */
+        bindings = <&kp LG(TAB)>;                 /* Win+Tab */
     };
 
     right {
         pattern = <GESTURE_RIGHT>;
-        bindings = <&kp LC(TAB)>;          /* Ctrl+Tab */
+        bindings = <&win_ctrl_right>;
     };
 
     left {
         pattern = <GESTURE_LEFT>;
-        bindings = <&kp LC(LS(TAB))>;      /* Ctrl+Shift+Tab */
+        bindings = <&win_ctrl_left>;
     };
 
     down {
