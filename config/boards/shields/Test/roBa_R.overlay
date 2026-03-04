@@ -63,11 +63,16 @@
 &pointer_accel {
     input-type = <INPUT_EV_REL>;
     track-remainders;
-    min-factor = <800>;             // 0.8x（低速を精密に）
-    max-factor = <3000>;            // 3.0x（高速を大きく）
-    speed-threshold = <1200>;       // ここから加速し始める
-    speed-max = <6000>;             // ここで最大加速に到達
-    acceleration-exponent = <2>;    // 二次カーブ
+    //min-factor = <800>;             // 0.8x（低速を精密に）
+    //max-factor = <3000>;            // 3.0x（高速を大きく）
+    //speed-threshold = <1200>;       // ここから加速し始める
+    //speed-max = <6000>;             // ここで最大加速に到達
+    //acceleration-exponent = <2>;    // 二次カーブ
+    min-factor = <650>;             // 低速をもっと精密に（0.65x）
+    max-factor = <3800>;            // 高速をもっと速く（3.8x）
+    speed-threshold = <1000>;       // 早めに加速を始める
+    speed-max = <4500>;             // 早めに最大加速へ
+    acceleration-exponent = <3>;    // 低速は抑えて高速でドン
 };
 
 / {
