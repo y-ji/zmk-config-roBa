@@ -3,6 +3,8 @@
 #include <mouse-gesture.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/modifiers.h>
+#include <input/processors.dtsi>
+#include <behaviors/input_gestures_accel.dtsi>
 
 &default_transform {
     col-offset = <6>;
@@ -58,10 +60,23 @@
             ;
 };
 
+&pointer_accel {
+    input-type = <INPUT_EV_REL>;
+    track-remainders;
+    min-factor = <800>;             // 0.8x（低速を精密に）
+    max-factor = <3000>;            // 3.0x（高速を大きく）
+    speed-threshold = <1200>;       // ここから加速し始める
+    speed-max = <6000>;             // ここで最大加速に到達
+    acceleration-exponent = <2>;    // 二次カーブ
+};
+
 / {
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
+
+        /* ★追加：通常レイヤーのときだけポインタ加速 */
+        input-processors = <&pointer_accel>;
 
         gesture_mode_8 {
             layers = <8>;
