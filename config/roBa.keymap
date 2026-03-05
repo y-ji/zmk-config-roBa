@@ -443,7 +443,7 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans     &trans     &trans              &trans
+&tog_ls_on &trans &trans &trans &trans                      &trans  &trans     &trans     &trans              &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LA(J)  &kp LA(K)  &kp LA(L)           &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LC(Z)  &kp LC(Y)  &kp LC(LA(DELETE))  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                            &trans
