@@ -247,17 +247,17 @@
 
         Copy {
             bindings = <&kp LC(C)>;
-            key-positions = <40 18 19>;
+            key-positions = <40 18>;
         };
 
         Cut {
             bindings = <&kp LC(X)>;
-            key-positions = <18 19 20 40>;
+            key-positions = <19 40>;
         };
 
         paste {
             bindings = <&kp LC(V)>;
-            key-positions = <41 18 19>;
+            key-positions = <20 40>;
         };
 
         Alt_J {
@@ -288,6 +288,31 @@
         Ctrl_Y {
             bindings = <&kp LC(Y)>;
             key-positions = <41 31>;
+        };
+
+        Left_back {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <38 11>;
+        };
+
+        left_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <38 12>;
+        };
+
+        left_del {
+            bindings = <&kp DELETE>;
+            key-positions = <38 13>;
+        };
+
+        left_Ctrl_Z {
+            bindings = <&kp LC(Z)>;
+            key-positions = <11 37>;
+        };
+
+        left_Ctrl_Y {
+            bindings = <&kp LC(Y)>;
+            key-positions = <12 37>;
         };
     };
 
