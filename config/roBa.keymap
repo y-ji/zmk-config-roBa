@@ -19,7 +19,7 @@
 
     up {
         pattern = <GESTURE_UP>;
-        bindings = <&kp LG(TAB)>;                 /* Win+Tab */
+        bindings = <&kp LC(LA(B))>;
     };
 
     right {
