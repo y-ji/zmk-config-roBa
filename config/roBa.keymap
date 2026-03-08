@@ -13,7 +13,7 @@
 /* layer 8: browser */
 
 &zip_mouse_gesture {
-    stroke-size = <10>;
+    stroke-size = <5>;
     idle-timeout-ms = <120>;
     enable-eager-mode;
 
