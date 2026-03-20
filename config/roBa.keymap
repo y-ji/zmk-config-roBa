@@ -428,12 +428,13 @@
 
     behaviors {
         /* layout_shift override */
+
         original_key_press: original_key_press {
             compatible = "zmk,behavior-key-press";
             #binding-cells = <1>;
             label = "KEY_PRESS";
         };
-    
+
         kp: key_press {
             compatible = "zmk,behavior-layout-shift-key-press";
             #binding-cells = <1>;
@@ -479,7 +480,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &henkan_lt 1 0  &lt 2 SPACE  &muhenkan_lt 6 0      &kp BACKSPACE  &kp DELETE                             &kp RIGHT_CONTROL
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
         };
 
         FUNCTION {
