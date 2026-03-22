@@ -467,6 +467,13 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
         };
+
+        enc_scroll: enc_scroll {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+        };
+
     };
 
     keymap {
@@ -480,7 +487,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &henkan_lt 1 0  &lt 2 SPACE  &muhenkan_lt 6 0      &kp BACKSPACE  &kp DELETE                             &kp RIGHT_CONTROL
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
+            sensor-bindings = <&enc_scroll SCRL_UP SCRL_DOWN>;
         };
 
         FUNCTION {
