@@ -469,9 +469,9 @@
         };
 
         enc_scroll: enc_scroll {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            #sensor-binding-cells = <2>;
-            bindings = <&msc>, <&msc>;
+            compatible = "zmk,behavior-sensor-rotate";
+            #binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
 
     };
@@ -487,7 +487,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &henkan_lt 1 0  &lt 2 SPACE  &muhenkan_lt 6 0      &kp BACKSPACE  &kp DELETE                             &kp RIGHT_CONTROL
             >;
 
-            sensor-bindings = <&enc_scroll SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&enc_scroll>;
         };
 
         FUNCTION {
