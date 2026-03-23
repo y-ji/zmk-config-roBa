@@ -486,7 +486,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &henkan_lt 1 0  &lt 2 SPACE  &muhenkan_lt 6 0      &kp BACKSPACE  &kp DELETE                             &kp RIGHT_CONTROL
             >;
 
-            sensor-bindings = <&inc_dec_kp A B>;
+            sensor-bindings = <&inc_dec_kp F23 F24>;
         };
 
         FUNCTION {
