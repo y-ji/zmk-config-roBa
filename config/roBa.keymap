@@ -476,10 +476,10 @@
 
         scroll_mid: scroll_layer_middle_click {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo 5>, <&mkp MCLK>;
+            bindings = <&mo>, <&mkp>;
         };
 
     };
