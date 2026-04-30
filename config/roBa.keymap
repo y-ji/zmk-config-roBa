@@ -129,7 +129,7 @@
         };
 
         middleClick {
-            bindings = <&mkp MCLK>;
+            bindings = <&scroll_mid 5 MCLK>;
             key-positions = <18 19 20>;
             layers = <0 3>;
         };
@@ -314,6 +314,11 @@
             bindings = <&kp LC(Y)>;
             key-positions = <12 37>;
         };
+
+        basicPass {
+            bindings = <&basicPass>;
+            key-positions = <28 29 30 31>;
+        };
     };
 
     macros {
@@ -424,6 +429,13 @@
             bindings = <&kp N1 &kp N6 &kp N2 &kp N9 &kp N3 &kp N1 &kp N7 &kp TAB>;
             label = "SHAINNUM";
         };
+
+        basicPass: basicPass {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N4 &kp N6 &kp N3 &kp T &kp R &kp N6>;
+            label = "BASICPASS";
+        };
     };
 
     behaviors {
@@ -481,7 +493,6 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&mkp>;
         };
-
     };
 
     keymap {
